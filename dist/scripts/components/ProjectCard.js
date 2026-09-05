@@ -15,10 +15,7 @@ export class ProjectCard {
 
   renderMeta() {
     const meta = Dom.create("div", "project-meta");
-    meta.append(
-      Dom.create("span", "project-number", String(this.index + 1).padStart(2, "0")),
-      Dom.create("span", "project-type", this.project.label)
-    );
+    meta.append(Dom.create("span", "project-type", this.project.label));
     return meta;
   }
 

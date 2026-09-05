@@ -46,39 +46,13 @@ button {
 
 .site-header {
   position: fixed;
-  top: 18px;
-  left: 50%;
+  top: 22px;
+  right: 22px;
   z-index: 30;
   display: flex;
-  width: min(1160px, calc(100% - 28px));
+  width: auto;
   align-items: center;
-  justify-content: space-between;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08);
-  backdrop-filter: blur(18px);
-  transform: translateX(-50%);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-right: 12px;
-  font-weight: 900;
-}
-
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border-radius: var(--radius);
-  background: var(--ink);
-  color: white;
-  font-family: "Space Grotesk", Inter, sans-serif;
+  justify-content: flex-end;
 }
 
 .jump-menu {
@@ -86,21 +60,26 @@ button {
 }
 
 .jump-button {
-  display: inline-flex;
-  min-height: 40px;
+  display: grid;
+  width: 48px;
+  height: 48px;
   align-items: center;
-  gap: 10px;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 10px 13px;
-  background: var(--paper-solid);
+  border-radius: 50%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.12);
   color: var(--ink);
   cursor: pointer;
-  font-weight: 900;
+  backdrop-filter: blur(18px);
 }
 
 .jump-button span {
-  font-size: 0.78rem;
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
 }
 
 .jump-list {
@@ -133,7 +112,19 @@ button {
   font-weight: 800;
 }
 
-.jump-list a:hover {
+.jump-list button {
+  border: 0;
+  border-radius: var(--radius);
+  padding: 11px 12px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 800;
+  text-align: left;
+}
+
+.jump-list a:hover,
+.jump-list button:hover {
   background: #f1f3f7;
   color: var(--ink);
 }
@@ -150,22 +141,32 @@ main {
   min-height: 100vh;
   place-items: center;
   padding-top: 92px;
+  perspective: 1200px;
 }
 
 .macbook-stage {
   position: fixed;
-  top: 92px;
+  top: 88px;
   left: 50%;
   z-index: 0;
-  width: min(980px, 100%);
-  height: min(72vh, 720px);
+  display: grid;
+  width: min(1040px, 92vw);
+  height: min(74vh, 720px);
+  place-items: center;
   pointer-events: none;
   transform: translateX(-50%);
+  transform-style: preserve-3d;
 }
 
-#macbookScene {
-  width: 100%;
-  height: 100%;
+.macbook-image {
+  width: min(760px, 86vw);
+  max-height: 62vh;
+  object-fit: contain;
+  filter: drop-shadow(0 34px 42px rgba(17, 24, 39, 0.24));
+  transform-origin: 50% 70%;
+  transform-style: preserve-3d;
+  transition: filter 220ms ease;
+  will-change: transform;
 }
 
 .hero-copy {
@@ -179,7 +180,6 @@ main {
 }
 
 .eyebrow,
-.section-kicker,
 .project-type {
   margin: 0;
   color: var(--blue);
@@ -231,19 +231,14 @@ p {
   z-index: 2;
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: clamp(24px, 6vw, 76px);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   padding: 140px 0;
 }
 
-.section-kicker {
-  position: sticky;
-  top: 118px;
-  align-self: start;
-}
-
 .section-copy {
+  width: min(900px, 100%);
+  margin-left: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(24px, 5vw, 54px);
@@ -253,18 +248,18 @@ p {
 }
 
 .about-section .section-copy {
-  max-width: 860px;
+  max-width: 780px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
 .project-card {
   display: flex;
-  min-height: 290px;
+  min-height: 300px;
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -282,16 +277,9 @@ p {
 .project-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
-  margin-bottom: 34px;
-}
-
-.project-number {
-  color: var(--ink);
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
+  margin-bottom: 42px;
 }
 
 .project-description {
@@ -333,6 +321,75 @@ p {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+.icon-link {
+  display: inline-grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper-solid);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.icon-link:hover {
+  background: #f1f3f7;
+  transform: translateY(-2px);
+}
+
+.icon-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.cv-dialog {
+  width: min(980px, calc(100% - 26px));
+  height: min(820px, calc(100vh - 26px));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0;
+  background: var(--paper-solid);
+  box-shadow: var(--shadow);
+}
+
+.cv-dialog::backdrop {
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.cv-dialog-header,
+.cv-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+}
+
+.cv-dialog-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-dialog iframe {
+  display: block;
+  width: 100%;
+  height: calc(100% - 134px);
+  border: 0;
+}
+
+.dialog-close {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #f5f7fb;
+  cursor: pointer;
+  font-weight: 900;
 }
 
 .skill-panel {
@@ -408,10 +465,6 @@ p {
     padding: 84px 0;
   }
 
-  .section-kicker {
-    position: static;
-  }
-
   .projects-grid,
   .skills-grid {
     grid-template-columns: 1fr;
@@ -425,7 +478,7 @@ p {
 
   .site-header {
     top: 10px;
-    width: min(100% - 18px, 1160px);
+    right: 10px;
   }
 
   main {
@@ -434,6 +487,10 @@ p {
 
   .macbook-stage {
     height: 52vh;
+  }
+
+  .macbook-image {
+    width: min(620px, 112vw);
   }
 
   .section-copy {

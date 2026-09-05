@@ -1,5 +1,5 @@
 import { ScrollAnimator } from "../animations/ScrollAnimator.js";
-import { MacbookScene } from "../scenes/MacbookScene.js";
+import { MacbookStage } from "../scenes/MacbookStage.js";
 import { Dom } from "../utils/dom.js";
 import { PortfolioRenderer } from "./PortfolioRenderer.js";
 
@@ -8,21 +8,22 @@ export class PortfolioApp {
     this.profile = profile;
     this.renderer = new PortfolioRenderer(profile);
     this.scrollAnimator = new ScrollAnimator();
-    this.macbookScene = null;
+    this.macbookStage = null;
   }
 
   mount() {
     this.renderer.render();
-    this.startMacbookScene();
+    this.startMacbookStage();
     this.bindJumpMenu();
+    this.bindCvPreview();
     this.bindScrollProgress();
     this.scrollAnimator.observeAll();
   }
 
-  startMacbookScene() {
-    const canvas = Dom.select("#macbookScene");
-    this.macbookScene = new MacbookScene(canvas);
-    this.macbookScene.start();
+  startMacbookStage() {
+    const stage = Dom.select("#macbookStage");
+    this.macbookStage = new MacbookStage(stage);
+    this.macbookStage.start();
   }
 
   bindJumpMenu() {
@@ -42,11 +43,26 @@ export class PortfolioApp {
     });
   }
 
+  bindCvPreview() {
+    const dialog = Dom.select("#cvDialog");
+    const openButtons = [Dom.select("#cvPreviewButton"), Dom.select("#cvPreviewMenu")];
+    const closeButton = Dom.select("#cvCloseButton");
+
+    openButtons.forEach((button) => {
+      button.addEventListener("click", () => dialog.showModal());
+    });
+
+    closeButton.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+
   bindScrollProgress() {
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? window.scrollY / max : 0;
-      this.macbookScene?.setScrollProgress(progress);
+      this.macbookStage?.setScrollProgress(progress);
     };
 
     update();

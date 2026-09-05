@@ -27,6 +27,20 @@ export const portfolioProfile = {
       detail: "Game-based research platform using eye tracking, camera position estimation, and interactive 3D visualization.",
       stack: ["OpenCV", "3D", "UX Study"],
       link: "https://github.com/LucianUritu/Parallax-User-Study"
+    },
+    {
+      title: "Helsinki Route Planner",
+      label: "Mobility",
+      detail: "JavaFX route-planning application with real-time journey planning and transit heatmap visualization for Helsinki.",
+      stack: ["JavaFX", "Routes", "Heatmaps", "UX"],
+      link: "https://github.com/LucianUritu/Helsinki-Route-Planner"
+    },
+    {
+      title: "Graph Coloring Game",
+      label: "Algorithms",
+      detail: "Interactive JavaFX game for exploring graph theory, coloring algorithms, and multiple game modes.",
+      stack: ["JavaFX", "Graphs", "Algorithms", "OOP"],
+      link: "https://github.com/LucianUritu/Graph-Coloring"
     }
   ],
   skills: [
