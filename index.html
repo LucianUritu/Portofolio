@@ -3,170 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lucian Uritu - software engineer portfolio, projects, skills, and contact.">
+  <meta name="description" content="Lucian Uritu - software engineer portfolio focused on Open Science tooling, high-performance computing, network protocols, and interactive systems.">
   <title>Lucian Uritu - Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
+  <canvas class="field-canvas" id="fieldCanvas" aria-hidden="true"></canvas>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Go to homepage">
+    <a class="brand" href="#home" aria-label="Lucian Uritu home">
       <span class="brand-mark">LU</span>
-      <span data-field="name">Lucian Uritu</span>
+      <span>Lucian Uritu</span>
     </a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#systems">Systems</a>
+      <a href="#timeline">Timeline</a>
       <a href="#contact">Contact</a>
-      <button class="icon-button" id="openAdmin" type="button" aria-label="Open administration panel" title="Admin panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
   </header>
 
   <main id="home">
-    <section class="hero section-grid">
+    <section class="hero section-shell">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Software engineer - full-stack systems - product polish</p>
-        <h1 data-field="headline">I build fast, elegant software that feels alive.</h1>
-        <p class="hero-summary" data-field="bio">
-          Computer Science graduate focused on reliable web apps, refined interfaces, clean architecture, and practical automation.
+        <p class="eyebrow">Software engineer in progress - Open Science, HPC, networks, interactive systems</p>
+        <h1>Engineering ideas into systems people can actually use.</h1>
+        <p class="hero-summary">
+          Computer Science student at Maastricht University building real software across authoring tools, parallel simulation, protocol design, and eye-tracked 3D interaction.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#work">Explore projects</a>
-          <a class="button ghost" href="Lucian%20Uritu%20CV%202025.pdf" download>Download CV</a>
-        </div>
-        <div class="signal-strip" aria-label="Portfolio highlights">
-          <span><strong data-field="years">2+</strong> years building</span>
-          <span><strong data-field="projectsCount">12</strong> projects shipped</span>
-          <span><strong>24/7</strong> curiosity mode</span>
+          <a class="button primary" href="#projects">See the work</a>
+          <a class="button ghost" href="Lucian%20Uritu%20CV%20main.pdf" download>Download CV</a>
         </div>
       </div>
 
-      <div class="hero-visual reveal">
-        <div class="orbital-stage" aria-hidden="true">
-          <div class="code-tile tile-a">React</div>
-          <div class="code-tile tile-b">Node</div>
-          <div class="code-tile tile-c">Cloud</div>
-          <div class="scan-ring"></div>
-          <img id="profilePhoto" src="photoMe.jpg" alt="Portrait of Lucian Uritu">
+      <div class="hero-stage reveal" aria-label="Interactive 3D technology constellation">
+        <canvas id="techScene"></canvas>
+        <div class="stage-card stage-card-top">
+          <span>Launch target</span>
+          <strong>Nov 2026</strong>
+        </div>
+        <div class="stage-card stage-card-bottom">
+          <span>HPC result</span>
+          <strong>14.9x speedup</strong>
         </div>
       </div>
     </section>
 
-    <section class="marquee" aria-label="Technology stack">
-      <div class="marquee-track">
-        <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Databases</span><span>APIs</span><span>UI Motion</span><span>Testing</span>
-        <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Databases</span><span>APIs</span><span>UI Motion</span><span>Testing</span>
-      </div>
+    <section class="metrics-strip" aria-label="Portfolio highlights">
+      <article class="metric reveal">
+        <span>01</span>
+        <strong>MUP Authoring Tool</strong>
+        <p>Approved platform idea, designed and developed end-to-end for Maastricht University Press.</p>
+      </article>
+      <article class="metric reveal">
+        <span>02</span>
+        <strong>Parallel systems</strong>
+        <p>MPI, SUMO, METIS, Louvain, Spectral, KD partitioning, and cluster-based bottleneck analysis.</p>
+      </article>
+      <article class="metric reveal">
+        <span>03</span>
+        <strong>Protocol craft</strong>
+        <p>Gemini server and client architecture with proxying, parsing, file handling, and tests.</p>
+      </article>
     </section>
 
-    <section class="section-block" id="work">
+    <section class="section-shell split-section" id="about">
       <div class="section-heading reveal">
-        <p class="eyebrow">Selected builds</p>
-        <h2>Projects with bite.</h2>
-        <p>Admin-editable cards for the work you want recruiters and collaborators to remember.</p>
+        <p class="eyebrow">Profile</p>
+        <h2>Not just web polish. Real systems work.</h2>
+      </div>
+      <div class="profile-panel reveal">
+        <p>
+          I am a Computer Science student at Maastricht University with hands-on work in software engineering, high-performance computing, networking, and embedded systems.
+        </p>
+        <p>
+          I like hard problems with a visible result: a tool that helps non-technical authors publish, a simulation that scales across CPU cores, a protocol implementation that behaves cleanly, or a 3D study platform that turns interaction into measurable data.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-shell" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected projects</p>
+        <h2>Work that proves range.</h2>
       </div>
       <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
-    <section class="section-grid about-block" id="skills">
+    <section class="section-shell systems-section" id="systems">
       <div class="section-heading reveal">
-        <p class="eyebrow">How I work</p>
-        <h2>Clean systems, sharp interfaces, measurable outcomes.</h2>
-        <p data-field="about">
-          I like building the full path from idea to production: shaping the UX, modeling data, writing dependable code, and polishing the last interaction.
-        </p>
+        <p class="eyebrow">Capabilities</p>
+        <h2>A technical stack with depth, not decoration.</h2>
       </div>
-      <div class="skill-console reveal">
-        <div class="console-top">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="console-lines" id="skillList"></div>
-      </div>
+      <div class="systems-grid" id="capabilityGrid"></div>
     </section>
 
-    <section class="section-block experience-block">
+    <section class="section-shell split-section" id="timeline">
       <div class="section-heading reveal">
         <p class="eyebrow">Trajectory</p>
-        <h2>Built for momentum.</h2>
+        <h2>From competition algorithms to deployable platforms.</h2>
       </div>
-      <div class="timeline" id="timeline"></div>
+      <div class="timeline" id="timelineList"></div>
+    </section>
+
+    <section class="section-shell awards-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Awards</p>
+        <h2>Competitive roots.</h2>
+      </div>
+      <div class="awards-grid" id="awardsGrid"></div>
     </section>
 
     <section class="contact-panel reveal" id="contact">
       <div>
-        <p class="eyebrow">Let us build something</p>
-        <h2>Need software that looks as good as it works?</h2>
-        <p data-field="contactText">I am open to software engineering roles, internships, freelance builds, and ambitious product ideas.</p>
+        <p class="eyebrow">Contact</p>
+        <h2>Bring me a difficult build.</h2>
+        <p>I am looking to keep developing as a software engineer on challenging, real-world problems.</p>
       </div>
       <div class="contact-actions">
-        <a class="button primary" id="emailLink" href="mailto:lucian@example.com">Email me</a>
-        <a class="social-link" id="githubLink" href="https://github.com" target="_blank" rel="noreferrer">
-          <img src="github.png" alt=""> GitHub
-        </a>
-        <a class="social-link" id="linkedinLink" href="https://linkedin.com" target="_blank" rel="noreferrer">
-          <img src="linkedin.png" alt=""> LinkedIn
-        </a>
+        <a class="button primary" href="mailto:lucian@uritu.net">lucian@uritu.net</a>
+        <a class="button ghost" href="https://github.com/LucianUritu" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button ghost" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>
 
-  <aside class="admin-panel" id="adminPanel" aria-label="Administration panel" aria-hidden="true">
-    <div class="admin-backdrop" id="closeAdmin"></div>
-    <form class="admin-sheet" id="adminForm">
-      <div class="admin-header">
-        <div>
-          <p class="eyebrow">Administration</p>
-          <h2>Portfolio control room</h2>
-        </div>
-        <button class="close-button" type="button" id="closeAdminButton" aria-label="Close administration panel">x</button>
-      </div>
-
-      <div class="admin-tabs" role="tablist" aria-label="Admin sections">
-        <button type="button" class="tab-button active" data-tab="profile">Profile</button>
-        <button type="button" class="tab-button" data-tab="projects">Projects</button>
-        <button type="button" class="tab-button" data-tab="skills-admin">Skills</button>
-      </div>
-
-      <section class="admin-section active" data-panel="profile">
-        <label>Name <input name="name" type="text"></label>
-        <label>Headline <textarea name="headline" rows="2"></textarea></label>
-        <label>Bio <textarea name="bio" rows="4"></textarea></label>
-        <label>About <textarea name="about" rows="4"></textarea></label>
-        <label>Email <input name="email" type="email"></label>
-        <label>GitHub URL <input name="github" type="url"></label>
-        <label>LinkedIn URL <input name="linkedin" type="url"></label>
-        <label>Photo URL <input name="photo" type="text" placeholder="photoMe.jpg or https://..."></label>
-        <label>Accent color <input name="accent" type="color"></label>
-      </section>
-
-      <section class="admin-section" data-panel="projects">
-        <div class="admin-list" id="projectEditor"></div>
-        <button class="button ghost full" id="addProject" type="button">Add project</button>
-      </section>
-
-      <section class="admin-section" data-panel="skills-admin">
-        <label>Skills, comma separated <textarea name="skills" rows="5"></textarea></label>
-        <label>Timeline, one item per line <textarea name="timeline" rows="5"></textarea></label>
-        <label>Contact text <textarea name="contactText" rows="3"></textarea></label>
-      </section>
-
-      <div class="admin-footer">
-        <button class="button ghost" id="resetPortfolio" type="button">Reset</button>
-        <button class="button primary" type="submit">Save changes</button>
-      </div>
-    </form>
-  </aside>
-
-  <script src="app.js"></script>
+  <script async src="https://unpkg.com/es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
-
