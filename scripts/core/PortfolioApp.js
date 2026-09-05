@@ -1,5 +1,5 @@
 import { ScrollAnimator } from "../animations/ScrollAnimator.js";
-import { MacbookStage } from "../scenes/MacbookStage.js";
+import { SystemMapStage } from "../scenes/SystemMapStage.js";
 import { Dom } from "../utils/dom.js";
 import { PortfolioRenderer } from "./PortfolioRenderer.js";
 
@@ -8,22 +8,22 @@ export class PortfolioApp {
     this.profile = profile;
     this.renderer = new PortfolioRenderer(profile);
     this.scrollAnimator = new ScrollAnimator();
-    this.macbookStage = null;
+    this.systemMapStage = null;
   }
 
   mount() {
     this.renderer.render();
-    this.startMacbookStage();
+    this.startSystemMapStage();
     this.bindJumpMenu();
     this.bindCvPreview();
     this.bindScrollProgress();
     this.scrollAnimator.observeAll();
   }
 
-  startMacbookStage() {
-    const stage = Dom.select("#macbookStage");
-    this.macbookStage = new MacbookStage(stage);
-    this.macbookStage.start();
+  startSystemMapStage() {
+    const stage = Dom.select("#systemMapStage");
+    this.systemMapStage = new SystemMapStage(stage);
+    this.systemMapStage.start();
   }
 
   bindJumpMenu() {
@@ -62,7 +62,7 @@ export class PortfolioApp {
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? window.scrollY / max : 0;
-      this.macbookStage?.setScrollProgress(progress);
+      this.systemMapStage?.setScrollProgress(progress);
     };
 
     update();

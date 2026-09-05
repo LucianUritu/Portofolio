@@ -30,18 +30,38 @@
 
   <main id="top">
     <section class="hero">
-      <div class="macbook-stage" id="macbookStage" aria-label="3D MacBook portfolio intro">
-        <img
-          class="macbook-image"
-          id="macbookImage"
-          src="https://www.pngitem.com/pimgs/m/649-6490304_macbook-pro-13-inch-side-view-acer-cb15.png"
-          alt="MacBook Pro side view"
-        >
-      </div>
-      <div class="hero-copy">
-        <p class="eyebrow">Software engineer</p>
-        <h1>Lucian Uritu</h1>
-        <p>Scroll to open the work.</p>
+      <div class="system-map-stage" id="systemMapStage" aria-label="Interactive system map">
+        <canvas class="system-map-lines" id="systemMapLines" aria-hidden="true"></canvas>
+        <div class="system-map" id="systemMap">
+          <button class="map-core" type="button" data-target="#about" aria-label="Open About me">
+            <span>LU</span>
+            <strong>Systems</strong>
+          </button>
+          <button class="map-node node-open-science" type="button" data-target="#projects">
+            <span>Open Science</span>
+            <small>MUP Authoring Tool</small>
+          </button>
+          <button class="map-node node-hpc" type="button" data-target="#projects">
+            <span>HPC</span>
+            <small>Traffic simulation</small>
+          </button>
+          <button class="map-node node-networking" type="button" data-target="#projects">
+            <span>Networking</span>
+            <small>Gemini-Lite</small>
+          </button>
+          <button class="map-node node-ux" type="button" data-target="#projects">
+            <span>3D UX</span>
+            <small>Parallax study</small>
+          </button>
+          <button class="map-node node-mobility" type="button" data-target="#projects">
+            <span>Mobility</span>
+            <small>Helsinki planner</small>
+          </button>
+          <button class="map-node node-algorithms" type="button" data-target="#skills">
+            <span>Algorithms</span>
+            <small>Graph coloring</small>
+          </button>
+        </div>
       </div>
     </section>
 

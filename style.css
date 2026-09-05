@@ -144,39 +144,126 @@ main {
   perspective: 1200px;
 }
 
-.macbook-stage {
+.system-map-stage {
   position: fixed;
-  top: 88px;
+  top: 50%;
   left: 50%;
-  z-index: 0;
+  z-index: 2;
   display: grid;
-  width: min(1040px, 92vw);
-  height: min(74vh, 720px);
+  width: min(1180px, 94vw);
+  height: min(82vh, 780px);
   place-items: center;
   pointer-events: none;
-  transform: translateX(-50%);
+  transform: translate3d(-50%, -50%, 0);
   transform-style: preserve-3d;
+  transition: opacity 220ms ease;
 }
 
-.macbook-image {
-  width: min(760px, 86vw);
-  max-height: 62vh;
-  object-fit: contain;
-  filter: drop-shadow(0 34px 42px rgba(17, 24, 39, 0.24));
-  transform-origin: 50% 70%;
+.system-map-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.system-map {
+  position: relative;
+  width: min(900px, 86vw);
+  aspect-ratio: 1;
+  pointer-events: auto;
+  transform-origin: 50% 50%;
   transform-style: preserve-3d;
-  transition: filter 220ms ease;
   will-change: transform;
 }
 
-.hero-copy {
-  position: relative;
-  z-index: 2;
-  align-self: end;
-  bottom: 9vh;
-  left: 0;
-  width: min(520px, 100%);
-  pointer-events: none;
+.map-core,
+.map-node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.map-core {
+  top: 50%;
+  left: 50%;
+  width: clamp(156px, 18vw, 224px);
+  height: clamp(156px, 18vw, 224px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.95), transparent 32%),
+    linear-gradient(145deg, #111318, #2b3038);
+  color: white;
+  transform: translate3d(-50%, -50%, 80px);
+}
+
+.map-core span {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.map-core strong {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.map-node {
+  width: clamp(136px, 15vw, 182px);
+  min-height: 94px;
+  border-radius: var(--radius);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.map-node:hover,
+.map-core:hover {
+  border-color: rgba(36, 87, 255, 0.38);
+  box-shadow: 0 28px 70px rgba(36, 87, 255, 0.15);
+}
+
+.map-node span {
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.map-node small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.node-open-science { top: 7%; left: 42%; transform: translateZ(44px); }
+.node-hpc { top: 26%; right: 4%; transform: translateZ(72px); }
+.node-networking { right: 9%; bottom: 20%; transform: translateZ(40px); }
+.node-ux { bottom: 7%; left: 42%; transform: translateZ(88px); }
+.node-mobility { bottom: 22%; left: 4%; transform: translateZ(52px); }
+.node-algorithms { top: 25%; left: 8%; transform: translateZ(68px); }
+
+.node-open-science,
+.node-ux {
+  animation: node-float 5.2s ease-in-out infinite;
+}
+
+.node-hpc,
+.node-mobility {
+  animation: node-float 5.8s ease-in-out 500ms infinite;
+}
+
+.node-networking,
+.node-algorithms {
+  animation: node-float 6.4s ease-in-out 900ms infinite;
 }
 
 .eyebrow,
@@ -228,7 +315,7 @@ p {
 
 .content-section {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   min-height: 100vh;
   grid-template-columns: minmax(0, 1fr);
@@ -443,20 +530,18 @@ p {
 }
 
 @media (max-width: 900px) {
-  .macbook-stage {
+  .system-map-stage {
     position: sticky;
     top: 82px;
     left: auto;
     z-index: 1;
     width: 100%;
-    height: 48vh;
+    height: 64vh;
     transform: none;
   }
 
-  .hero-copy {
-    position: relative;
-    bottom: auto;
-    padding-bottom: 32px;
+  .system-map {
+    width: min(640px, 100%);
   }
 
   .content-section {
@@ -485,12 +570,14 @@ p {
     width: min(100% - 18px, 1160px);
   }
 
-  .macbook-stage {
-    height: 52vh;
+  .system-map-stage {
+    height: 68vh;
   }
 
-  .macbook-image {
-    width: min(620px, 112vw);
+  .map-node {
+    width: 118px;
+    min-height: 82px;
+    padding: 10px;
   }
 
   .section-copy {
@@ -499,6 +586,17 @@ p {
 
   .contact-actions .button {
     width: 100%;
+  }
+}
+
+@keyframes node-float {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -14px;
   }
 }
 
