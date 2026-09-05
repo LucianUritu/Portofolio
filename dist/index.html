@@ -30,71 +30,79 @@
 
   <main id="top">
     <section class="hero">
-      <div class="system-map-stage" id="systemMapStage" aria-label="Interactive system map">
-        <canvas class="system-map-lines" id="systemMapLines" aria-hidden="true"></canvas>
-        <div class="system-map" id="systemMap">
-          <button class="map-core" type="button" data-target="#about" aria-label="Open About me">
-            <span>LU</span>
-            <strong>Systems</strong>
-          </button>
-          <button class="map-node node-open-science" type="button" data-target="#projects">
-            <span>Open Science</span>
-            <small>MUP Authoring Tool</small>
-          </button>
-          <button class="map-node node-hpc" type="button" data-target="#projects">
-            <span>HPC</span>
-            <small>Traffic simulation</small>
-          </button>
-          <button class="map-node node-networking" type="button" data-target="#projects">
-            <span>Networking</span>
-            <small>Gemini-Lite</small>
-          </button>
-          <button class="map-node node-ux" type="button" data-target="#projects">
-            <span>3D UX</span>
-            <small>Parallax study</small>
-          </button>
-          <button class="map-node node-mobility" type="button" data-target="#projects">
-            <span>Mobility</span>
-            <small>Helsinki planner</small>
-          </button>
-          <button class="map-node node-algorithms" type="button" data-target="#skills">
-            <span>Algorithms</span>
-            <small>Graph coloring</small>
-          </button>
+      <div class="command-center" id="commandCenter">
+        <div class="command-topline">
+          <span>Engineering command center</span>
+          <span class="live-dot">Available for real-world builds</span>
         </div>
+
+        <section class="identity-panel">
+          <p class="eyebrow">Software engineer</p>
+          <h1>Lucian Uritu</h1>
+          <p>
+            Computer Science student at Maastricht University building Open Science tools,
+            parallel simulations, protocol systems, and interaction-heavy software.
+          </p>
+          <div class="identity-actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button ghost" href="#contact">Contact</a>
+          </div>
+        </section>
+
+        <aside class="radar-panel" aria-label="Technical telemetry">
+          <canvas id="telemetryCanvas"></canvas>
+          <div class="radar-label">
+            <strong>System focus</strong>
+            <span>Open Science / HPC / Networks / UX</span>
+          </div>
+        </aside>
+
+        <section class="signal-panel signal-main">
+          <span class="panel-label">Current mission</span>
+          <strong>MUP Authoring Tool</strong>
+          <p>Approved platform, built end-to-end, launch planned for November 2026.</p>
+        </section>
+
+        <section class="signal-panel">
+          <span class="panel-label">Parallel result</span>
+          <strong>14.9x</strong>
+          <p>Speedup on 32 CPU cores in traffic simulation experiments.</p>
+        </section>
+
+        <section class="terminal-panel" aria-label="Portfolio terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <pre id="terminalFeed"></pre>
+        </section>
       </div>
     </section>
 
-    <section class="content-section about-section reveal" id="about" data-scene-step="about">
+    <section class="content-section about-section reveal" id="about">
       <div class="section-copy">
-        <h2>I build technical products from idea to working system.</h2>
+        <h2>About me</h2>
         <p>
-          Computer Science student at Maastricht University working across software engineering,
-          high-performance computing, networking, and interactive systems.
-        </p>
-        <p>
-          I care about clean architecture, real usability, and projects that prove they can survive outside a classroom.
+          I build technical products from idea to working system, with a focus on clean architecture,
+          real usability, and software that proves it can survive outside a classroom.
         </p>
       </div>
     </section>
 
-    <section class="content-section projects-section reveal" id="projects" data-scene-step="projects">
+    <section class="content-section projects-section reveal" id="projects">
       <div class="section-copy">
-        <h2>Selected builds.</h2>
+        <h2>Projects</h2>
         <div class="projects-grid" id="projectsGrid"></div>
       </div>
     </section>
 
-    <section class="content-section skills-section reveal" id="skills" data-scene-step="skills">
+    <section class="content-section skills-section reveal" id="skills">
       <div class="section-copy">
-        <h2>Stack and strengths.</h2>
+        <h2>Skills</h2>
         <div class="skills-grid" id="skillsGrid"></div>
       </div>
     </section>
 
-    <section class="content-section contact-section reveal" id="contact" data-scene-step="contact">
+    <section class="content-section contact-section reveal" id="contact">
       <div class="section-copy">
-        <h2>Let’s build something difficult.</h2>
+        <h2>Contact me</h2>
         <p>I am open to software engineering roles, internships, and ambitious technical projects.</p>
         <div class="contact-actions">
           <a class="button primary" href="mailto:lucian@uritu.net">lucian@uritu.net</a>

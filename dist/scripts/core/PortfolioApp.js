@@ -1,5 +1,5 @@
 import { ScrollAnimator } from "../animations/ScrollAnimator.js";
-import { SystemMapStage } from "../scenes/SystemMapStage.js";
+import { CommandCenter } from "../scenes/CommandCenter.js";
 import { Dom } from "../utils/dom.js";
 import { PortfolioRenderer } from "./PortfolioRenderer.js";
 
@@ -8,22 +8,22 @@ export class PortfolioApp {
     this.profile = profile;
     this.renderer = new PortfolioRenderer(profile);
     this.scrollAnimator = new ScrollAnimator();
-    this.systemMapStage = null;
+    this.commandCenter = null;
   }
 
   mount() {
     this.renderer.render();
-    this.startSystemMapStage();
+    this.startCommandCenter();
     this.bindJumpMenu();
     this.bindCvPreview();
     this.bindScrollProgress();
     this.scrollAnimator.observeAll();
   }
 
-  startSystemMapStage() {
-    const stage = Dom.select("#systemMapStage");
-    this.systemMapStage = new SystemMapStage(stage);
-    this.systemMapStage.start();
+  startCommandCenter() {
+    const root = Dom.select("#commandCenter");
+    this.commandCenter = new CommandCenter(root);
+    this.commandCenter.start();
   }
 
   bindJumpMenu() {
@@ -62,7 +62,7 @@ export class PortfolioApp {
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? window.scrollY / max : 0;
-      this.systemMapStage?.setScrollProgress(progress);
+      this.commandCenter?.setScrollProgress(progress);
     };
 
     update();
