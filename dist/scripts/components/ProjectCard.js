@@ -8,9 +8,8 @@ export class ProjectCard {
   }
 
   render() {
-    const card = Dom.create("article", `project-card reveal accent-${this.project.accent}`);
+    const card = Dom.create("article", "project-card reveal");
     card.append(this.renderMeta(), this.renderBody(), this.renderStack(), this.renderAction());
-    card.addEventListener("pointermove", (event) => this.updatePointerLight(event, card));
     return card;
   }
 
@@ -18,7 +17,7 @@ export class ProjectCard {
     const meta = Dom.create("div", "project-meta");
     meta.append(
       Dom.create("span", "project-number", String(this.index + 1).padStart(2, "0")),
-      Dom.create("span", "project-type", this.project.type)
+      Dom.create("span", "project-type", this.project.label)
     );
     return meta;
   }
@@ -26,10 +25,8 @@ export class ProjectCard {
   renderBody() {
     const body = Dom.create("div", "project-body");
     body.append(
-      Dom.create("p", "project-period", this.project.period),
       Dom.create("h3", "", this.project.title),
-      Dom.create("p", "project-description", this.project.description),
-      Dom.create("p", "project-impact", this.project.impact)
+      Dom.create("p", "project-description", this.project.detail)
     );
     return body;
   }
@@ -42,18 +39,12 @@ export class ProjectCard {
 
   renderAction() {
     const url = safeExternalUrl(this.project.link);
-    const action = Dom.create(url ? "a" : "span", "project-action", url ? "Open repository" : "Launch pending");
+    const action = Dom.create(url ? "a" : "span", "project-action", url ? "Open repository" : "Launching soon");
     if (url) {
       action.href = url;
       action.target = "_blank";
       action.rel = "noreferrer";
     }
     return action;
-  }
-
-  updatePointerLight(event, card) {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
-    card.style.setProperty("--my", `${event.clientY - rect.top}px`);
   }
 }

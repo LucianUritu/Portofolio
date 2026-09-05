@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lucian Uritu - software engineer portfolio focused on Open Science tooling, high-performance computing, network protocols, and interactive systems.">
+  <meta name="description" content="Lucian Uritu - software engineer portfolio with selected projects, skills, and contact.">
   <title>Lucian Uritu - Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,123 +11,78 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas class="field-canvas" id="fieldCanvas" aria-hidden="true"></canvas>
-
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Lucian Uritu home">
+    <a class="brand" href="#top" aria-label="Lucian Uritu home">
       <span class="brand-mark">LU</span>
       <span>Lucian Uritu</span>
     </a>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#projects">Projects</a>
-      <a href="#systems">Systems</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+    <div class="jump-menu">
+      <button class="jump-button" id="jumpButton" type="button" aria-expanded="false" aria-controls="jumpList">
+        Jump to
+        <span aria-hidden="true">v</span>
+      </button>
+      <nav class="jump-list" id="jumpList" aria-label="Quick navigation">
+        <a href="#about">About me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact me</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="home">
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Software engineer in progress - Open Science, HPC, networks, interactive systems</p>
-        <h1>Engineering ideas into systems people can actually use.</h1>
-        <p class="hero-summary">
-          Computer Science student at Maastricht University building real software across authoring tools, parallel simulation, protocol design, and eye-tracked 3D interaction.
+  <main id="top">
+    <section class="hero">
+      <div class="macbook-stage" aria-label="3D MacBook portfolio intro">
+        <canvas id="macbookScene"></canvas>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Software engineer</p>
+        <h1>Lucian Uritu</h1>
+        <p>Scroll. The machine turns, the work appears.</p>
+      </div>
+    </section>
+
+    <section class="content-section about-section reveal" id="about" data-scene-step="about">
+      <div class="section-kicker">01 / About me</div>
+      <div class="section-copy">
+        <h2>I build technical products from idea to working system.</h2>
+        <p>
+          Computer Science student at Maastricht University working across software engineering,
+          high-performance computing, networking, and interactive systems.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">See the work</a>
+        <p>
+          I care about clean architecture, real usability, and projects that prove they can survive outside a classroom.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section projects-section reveal" id="projects" data-scene-step="projects">
+      <div class="section-kicker">02 / Projects</div>
+      <div class="section-copy">
+        <h2>Selected builds.</h2>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section class="content-section skills-section reveal" id="skills" data-scene-step="skills">
+      <div class="section-kicker">03 / Skills</div>
+      <div class="section-copy">
+        <h2>Stack and strengths.</h2>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="content-section contact-section reveal" id="contact" data-scene-step="contact">
+      <div class="section-kicker">04 / Contact me</div>
+      <div class="section-copy">
+        <h2>Let’s build something difficult.</h2>
+        <p>I am open to software engineering roles, internships, and ambitious technical projects.</p>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:lucian@uritu.net">lucian@uritu.net</a>
+          <a class="button ghost" href="https://github.com/LucianUritu" target="_blank" rel="noreferrer">GitHub</a>
           <a class="button ghost" href="Lucian%20Uritu%20CV%20main.pdf" download>Download CV</a>
         </div>
-      </div>
-
-      <div class="hero-stage reveal" aria-label="Interactive 3D technology constellation">
-        <canvas id="techScene"></canvas>
-        <div class="stage-card stage-card-top">
-          <span>Launch target</span>
-          <strong>Nov 2026</strong>
-        </div>
-        <div class="stage-card stage-card-bottom">
-          <span>HPC result</span>
-          <strong>14.9x speedup</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="metrics-strip" aria-label="Portfolio highlights">
-      <article class="metric reveal">
-        <span>01</span>
-        <strong>MUP Authoring Tool</strong>
-        <p>Approved platform idea, designed and developed end-to-end for Maastricht University Press.</p>
-      </article>
-      <article class="metric reveal">
-        <span>02</span>
-        <strong>Parallel systems</strong>
-        <p>MPI, SUMO, METIS, Louvain, Spectral, KD partitioning, and cluster-based bottleneck analysis.</p>
-      </article>
-      <article class="metric reveal">
-        <span>03</span>
-        <strong>Protocol craft</strong>
-        <p>Gemini server and client architecture with proxying, parsing, file handling, and tests.</p>
-      </article>
-    </section>
-
-    <section class="section-shell split-section" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Profile</p>
-        <h2>Not just web polish. Real systems work.</h2>
-      </div>
-      <div class="profile-panel reveal">
-        <p>
-          I am a Computer Science student at Maastricht University with hands-on work in software engineering, high-performance computing, networking, and embedded systems.
-        </p>
-        <p>
-          I like hard problems with a visible result: a tool that helps non-technical authors publish, a simulation that scales across CPU cores, a protocol implementation that behaves cleanly, or a 3D study platform that turns interaction into measurable data.
-        </p>
-      </div>
-    </section>
-
-    <section class="section-shell" id="projects">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Selected projects</p>
-        <h2>Work that proves range.</h2>
-      </div>
-      <div class="projects-grid" id="projectsGrid"></div>
-    </section>
-
-    <section class="section-shell systems-section" id="systems">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Capabilities</p>
-        <h2>A technical stack with depth, not decoration.</h2>
-      </div>
-      <div class="systems-grid" id="capabilityGrid"></div>
-    </section>
-
-    <section class="section-shell split-section" id="timeline">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Trajectory</p>
-        <h2>From competition algorithms to deployable platforms.</h2>
-      </div>
-      <div class="timeline" id="timelineList"></div>
-    </section>
-
-    <section class="section-shell awards-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Awards</p>
-        <h2>Competitive roots.</h2>
-      </div>
-      <div class="awards-grid" id="awardsGrid"></div>
-    </section>
-
-    <section class="contact-panel reveal" id="contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Bring me a difficult build.</h2>
-        <p>I am looking to keep developing as a software engineer on challenging, real-world problems.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:lucian@uritu.net">lucian@uritu.net</a>
-        <a class="button ghost" href="https://github.com/LucianUritu" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="button ghost" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>

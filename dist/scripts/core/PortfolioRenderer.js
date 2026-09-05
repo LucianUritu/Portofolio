@@ -1,7 +1,5 @@
-import { AwardBadge } from "../components/AwardBadge.js";
 import { CapabilityPanel } from "../components/CapabilityPanel.js";
 import { ProjectCard } from "../components/ProjectCard.js";
-import { TimelineItem } from "../components/TimelineItem.js";
 import { Dom } from "../utils/dom.js";
 
 export class PortfolioRenderer {
@@ -11,9 +9,7 @@ export class PortfolioRenderer {
 
   render() {
     this.renderCollection("#projectsGrid", this.profile.projects, (project, index) => new ProjectCard(project, index).render());
-    this.renderCollection("#capabilityGrid", this.profile.capabilities, (capability) => new CapabilityPanel(capability).render());
-    this.renderCollection("#timelineList", this.profile.timeline, (entry) => new TimelineItem(entry).render());
-    this.renderCollection("#awardsGrid", this.profile.awards, (award) => new AwardBadge(award).render());
+    this.renderCollection("#skillsGrid", this.profile.skills, (skillGroup) => new CapabilityPanel(skillGroup).render());
   }
 
   renderCollection(selector, items, factory) {
