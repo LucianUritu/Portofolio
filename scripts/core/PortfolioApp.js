@@ -2,6 +2,7 @@ import { ScrollAnimator } from '../animations/ScrollAnimator.js';
 import { ProjectDemos, projectSymbols } from '../components/ProjectDemos.js';
 import { Dom } from '../utils/dom.js';
 import { safeExternalUrl } from '../utils/sanitize.js';
+import { arrowIcon } from '../utils/icons.js';
 
 export class PortfolioApp {
   constructor(profile) {
@@ -12,6 +13,7 @@ export class PortfolioApp {
 
   mount() {
     this.renderProjects();
+    this.bindTileMotion();
     this.renderSkills();
     this.selectProject(0, false);
     new ScrollAnimator().observeAll();
@@ -38,7 +40,10 @@ export class PortfolioApp {
         Dom.select('#work').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches || event.detail === 0 ? 'instant' : 'smooth' });
         this.choices[i].focus({ preventScroll: true });
       });
-      artifacts.append(tile);
+      const float = Dom.create('div', 'artifact-float');
+      float.style.setProperty('--i', i);
+      float.append(tile);
+      artifacts.append(float);
 
       const button = Dom.create('button', 'project-choice');
       button.type = 'button';
@@ -47,8 +52,7 @@ export class PortfolioApp {
       button.setAttribute('aria-controls', 'demoSurface projectDetail');
       const text = Dom.create('span');
       text.append(Dom.create('h3', '', project.title), Dom.create('small', '', project.label));
-      const arrow = Dom.create('span', 'choice-arrow', '↗');
-      arrow.setAttribute('aria-hidden', 'true');
+      const arrow = arrowIcon('up-right', 'choice-arrow');
       button.append(text, arrow);
       button.addEventListener('click', (event) => {
         this.selectProject(i, event.detail !== 0);
@@ -59,6 +63,25 @@ export class PortfolioApp {
       index.append(button);
     });
     this.choices = [...index.querySelectorAll('button')];
+  }
+
+  bindTileMotion() {
+    const stage = Dom.select('.hero-playground');
+    const button = Dom.select('#motionToggle');
+    let paused = false;
+    let visible = true;
+    const sync = () => stage.classList.toggle('is-motion-paused', paused || !visible || document.hidden);
+    button.addEventListener('click', () => {
+      paused = !paused;
+      button.setAttribute('aria-pressed', String(paused));
+      button.setAttribute('aria-label', paused ? 'Resume tile motion' : 'Pause tile motion');
+      sync();
+    });
+    document.addEventListener('visibilitychange', sync);
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync(); });
+      observer.observe(stage);
+    }
   }
 
   selectProject(i, animate = true) {
@@ -79,7 +102,8 @@ export class PortfolioApp {
     heading.append(Dom.create('h3', '', project.title));
     const url = safeExternalUrl(project.link);
     if (url) {
-      const link = Dom.create('a', 'text-link', 'Repository ↗');
+      const link = Dom.create('a', 'text-link', 'Repository');
+      link.append(arrowIcon());
       link.href = url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';

@@ -12,7 +12,7 @@
   --ease-out:cubic-bezier(.23,1,.32,1);
   --ease-in-out:cubic-bezier(.77,0,.175,1);
   --gutter:clamp(22px,4vw,72px);
-  font-family:'Switzer',Arial,sans-serif;
+  font-family:'Satoshi',Arial,sans-serif;
   font-synthesis:none
 }
 * {
@@ -57,6 +57,53 @@ p,h1,h2,h3,h4 {
 p {
   line-height:1.55
 }
+h1,h2,h3,h4,.wordmark,.background-feature,.playground-bottom p,.about-lead {
+  font-family:'Switzer',Arial,sans-serif;
+}
+.icon {
+  display:block;
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.scroll-cue .icon,.social-links .icon,.detail-heading .icon {
+  width:18px;
+  height:18px;
+}
+.email-link .icon {
+  width:32px;
+  height:32px;
+}
+.playground-hint .icon {
+  display:inline-block;
+  vertical-align:middle;
+  margin-left:5px;
+  width:19px;
+  height:19px;
+}
+.playground-controls {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.motion-toggle {
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:4px;
+  background:transparent;
+  color:inherit;
+}
+.motion-toggle .icon {width:18px;height:18px}
+.motion-toggle .play-icon,.motion-toggle[aria-pressed=true] .pause-icon {display:none}
+.motion-toggle[aria-pressed=true] .play-icon {display:block}
 button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible {
   outline:3px solid currentColor;
   outline-offset:6px
@@ -252,7 +299,16 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   transform:rotate(-7deg);
   padding:10px
 }
+.artifact-float {
+  min-width:0;
+  animation:tile-float calc(4s + var(--i)*.35s) var(--ease-in-out) infinite alternate;
+  animation-delay:calc(var(--i)*-.65s);
+}
+.hero-playground.is-motion-paused .artifact-float,.artifact-float:focus-within {
+  animation-play-state:paused;
+}
 .artifact {
+  width:100%;
   aspect-ratio:1;
   display:flex;
   flex-direction:column;
@@ -269,19 +325,19 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   transform:rotate(var(--r));
   overflow:hidden
 }
-.artifact:nth-child(even) {
+.artifact-float:nth-child(even) .artifact {
   background:#cedcff
 }
-.artifact:nth-child(3) {
+.artifact-float:nth-child(3) .artifact {
   background:#d9e6b2
 }
-.artifact:nth-child(4) {
+.artifact-float:nth-child(4) .artifact {
   background:#d1e4e6
 }
-.artifact:nth-child(5) {
+.artifact-float:nth-child(5) .artifact {
   background:#f7c6b8
 }
-.artifact:nth-child(6) {
+.artifact-float:nth-child(6) .artifact {
   background:#faf8ee
 }
 .artifact svg {
@@ -887,37 +943,68 @@ footer>span:first-child {
   background:#d0e4dd
 }
 .route-map {
+  position:absolute;
+  inset:0;
   width:100%;
   height:100%;
   overflow:visible
 }
-.route-node {
-  stroke:#eef5ee;
-  stroke-width:4;
-  fill:#286259
+.route-field {
+  position:relative;
+  height:100%;
+  min-height:175px;
+  margin-top:3px;
 }
 .route-line {
   fill:none;
   stroke:#286259;
-  stroke-width:7;
+  stroke-width:2;
   stroke-linejoin:round;
   stroke-linecap:round
 }
-.route-options {
-  display:flex;
-  gap:6px
-}
-.route-options button {
+.route-stop {
+  position:absolute;
+  width:44px;
+  height:44px;
+  padding:0;
   border:0;
-  border-radius:3px;
-  background:#eff5ee;
-  font-size:12px;
+  border-radius:50%;
+  background:#f1f6f0;
   color:#285f55;
-  padding:7px 9px
+  font-size:14px;
+  font-weight:700;
+  transform:translate(-50%,-50%);
+  user-select:none;
 }
-.route-options button[aria-pressed=true] {
+.route-stop[data-kind=start] {background:#285f55;color:white}
+.route-stop[data-kind=destination] {background:var(--blue);color:white}
+.route-stop.is-arrived {outline:3px solid var(--blue);outline-offset:4px}
+.route-stop:active {transform:translate(-50%,-50%) scale(.95)}
+.route-traveler {
+  position:absolute;
+  top:0;
+  left:0;
+  margin:-7px 0 0 -7px;
+  width:14px;
+  height:14px;
+  border:3px solid white;
+  border-radius:50%;
   background:#285f55;
-  color:white
+  pointer-events:none;
+  z-index:1;
+}
+.route-actions {
+  display:flex;
+  gap:7px;
+  flex-shrink:0;
+}
+.route-actions .demo-button {min-height:38px}
+.route-reset {background:#eff5ee;color:#285f55}
+.route-actions .demo-button:disabled {opacity:.45}
+.route-demo .demo-caption>span {max-width:32ch}
+@keyframes tile-float {
+  from {transform:translateY(6px)}
+  to {transform:translateY(-6px)}
 }
 .graph-demo {
   background:#d9dffd
@@ -1019,6 +1106,8 @@ body.keyboard-input .demo-surface.is-entering {
   }
 }
 @media(hover:hover) and (pointer:fine) {
+  .artifact-float:hover {animation-play-state:paused}
+  .motion-toggle:hover {background:var(--blue-deep)}
   .site-header nav a:hover,.cv-link:hover,.text-link:hover,.social-links a:hover {
     opacity:.65
   }
@@ -1634,6 +1723,12 @@ body.keyboard-input .demo-surface.is-entering {
     font-size:16px !important;
   }
 }
+@media (max-width:520px) {
+  .demo-surface.is-route-preview {
+    aspect-ratio:1;
+    min-height:340px;
+  }
+}
 /* Shared finishing rules keep small controls readable at every viewport. */
 .artifact>span {
   opacity:1;
@@ -1701,12 +1796,14 @@ body.keyboard-input .demo-surface.is-entering {
     animation-iteration-count:1!important;
     transition-duration:.01ms!important
   }
-  .title-line>span,.hero-playground,.artifact {
+  .title-line>span,.hero-playground,.artifact,.artifact-float {
     animation:none!important
   }
   .artifact {
     transform:rotate(var(--r))
   }
+  .artifact-float {transform:none}
+  .motion-toggle {display:none}
   .reveal.is-waiting {
     opacity:1;
     transform:none

@@ -4,6 +4,22 @@
     "pass": true
   },
   {
+    "name": "Every link arrow uses SVG, with no font-dependent arrow characters",
+    "pass": true
+  },
+  {
+    "name": "Satoshi loads for body type while display headings keep Switzer",
+    "pass": true
+  },
+  {
+    "name": "Tiles float without hovering",
+    "pass": true
+  },
+  {
+    "name": "Tile motion can be paused and resumed",
+    "pass": true
+  },
+  {
     "name": "Live authoring updates and escapes HTML",
     "pass": true
   },
@@ -44,7 +60,19 @@
     "pass": true
   },
   {
-    "name": "Route control selects a different path",
+    "name": "Route needs two different selected stops",
+    "pass": true
+  },
+  {
+    "name": "Route runs from selected start to selected destination",
+    "pass": true
+  },
+  {
+    "name": "A new selection clears the completed journey and Reset clears both stops",
+    "pass": true
+  },
+  {
+    "name": "Reset cancels an in-flight journey without a stale arrival",
     "pass": true
   },
   {
@@ -76,6 +104,10 @@
     "pass": true
   },
   {
+    "name": "Route controls stay inside the preview at 1440px",
+    "pass": true
+  },
+  {
     "name": "No horizontal overflow at 1440px, project 6",
     "pass": true
   },
@@ -97,6 +129,10 @@
   },
   {
     "name": "No horizontal overflow at 768px, project 5",
+    "pass": true
+  },
+  {
+    "name": "Route controls stay inside the preview at 768px",
     "pass": true
   },
   {
@@ -128,6 +164,10 @@
     "pass": true
   },
   {
+    "name": "Route controls stay inside the preview at 390px",
+    "pass": true
+  },
+  {
     "name": "No horizontal overflow at 390px, project 6",
     "pass": true
   },
@@ -152,6 +192,10 @@
     "pass": true
   },
   {
+    "name": "Route controls stay inside the preview at 320px",
+    "pass": true
+  },
+  {
     "name": "No horizontal overflow at 320px, project 6",
     "pass": true
   },
@@ -161,6 +205,14 @@
   },
   {
     "name": "Reduced motion keeps hero content visible without entrance travel",
+    "pass": true
+  },
+  {
+    "name": "Reduced motion disables floating tiles",
+    "pass": true
+  },
+  {
+    "name": "Reduced motion route reaches its destination immediately",
     "pass": true
   },
   {

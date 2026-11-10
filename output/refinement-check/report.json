@@ -1,0 +1,2056 @@
+{
+ "url": "http://127.0.0.1:3006/dist/index.html",
+ "at": "2026-11-10T10:28:16.406Z",
+ "allow": [
+  "few-pictures"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.45,
+    0.98,
+    0.56,
+    0.84,
+    0.87
+   ],
+   "motion": {
+    "elements": 21,
+    "css": 15,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3826,
+     "screens": 4.3,
+     "words": 361,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "chars": 25,
+     "lines": 2,
+     "size": 91.4,
+     "vw": 6.3,
+     "font": "Switzer",
+     "weight": 500,
+     "tracking": -0.062,
+     "leading": 1.01,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.34,
+     "top": 182,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "lines": 2,
+     "size": 91.4,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Ideas into real software.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 91.4,
+      "vw": 6.3,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.062,
+      "leading": 1.01,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 182,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Different problems. The same curiosity.",
+      "words": 5,
+      "chars": 39,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 2.6,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 663,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Less talk. More building.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 82.1,
+      "vw": 5.7,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.32,
+      "top": 953,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "MUP Authoring Tool",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 1214,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Unblocking the City",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 1320,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Gemini-Lite Protocol",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 1426,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Parallax User Study",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 1533,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Helsinki Route Planner",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 1639,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Graph Coloring Game",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 1745,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A builder, still learning.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 82.1,
+      "vw": 5.7,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 2139,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Let's make it happen.",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 177.1,
+      "vw": 12.3,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.065,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3185,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "lucian@uritu.net",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 43,
+      "vw": 3,
+      "font": "Satoshi",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 3570,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Satoshi",
+       "share": 0.8,
+       "mono": false
+      },
+      {
+       "family": "Switzer",
+       "share": 0.2,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      27,
+      32,
+      37,
+      43,
+      82,
+      91,
+      177
+     ],
+     "sizeCount": 14,
+     "notLoaded": [
+      "Satoshi"
+     ],
+     "body": {
+      "font": "Satoshi",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.9
+     },
+     "measureChars": 62,
+     "max": {
+      "size": 177.1,
+      "vw": 12.3,
+      "font": "Switzer",
+      "text": "Let's makeit happen."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f5f5f2",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.13,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#242622",
+       "top": 849,
+       "hsl": {
+        "h": 90,
+        "s": 0.06,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#2448ee",
+       "top": 3045,
+       "hsl": {
+        "h": 229,
+        "s": 0.86,
+        "l": 0.54
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#252622",
+       "share": 0.53
+      },
+      {
+       "color": "#b9bcb3",
+       "share": 0.19
+      },
+      {
+       "color": "#64665e",
+       "share": 0.07
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#f5f5f2",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#252622",
+      "hsl": {
+       "h": 75,
+       "s": 0.06,
+       "l": 0.14
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 11,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 2578
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 116,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3826,
+    "margins": {
+     "left": 58,
+     "right": 84
+    },
+    "sections": [
+     {
+      "sel": "section#top.hero.frame",
+      "tag": "section",
+      "top": 116,
+      "height": 733,
+      "words": 64,
+      "media": 1,
+      "middle": 80,
+      "heading": {
+       "text": "Ideas into",
+       "size": 91,
+       "tag": "h1"
+      },
+      "left": 53,
+      "right": 85,
+      "textLeft": 53,
+      "textRight": 110,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.work-section",
+      "tag": "section",
+      "top": 849,
+      "height": 1164,
+      "words": 124,
+      "media": 0,
+      "middle": 70,
+      "heading": {
+       "text": "Less talk.",
+       "size": 82,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 84,
+      "textLeft": 58,
+      "textRight": 84,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about-section.frame",
+      "tag": "section",
+      "top": 2014,
+      "height": 1032,
+      "words": 160,
+      "media": 0,
+      "middle": 77,
+      "heading": {
+       "text": "A builder,",
+       "size": 82,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 88,
+      "textLeft": 58,
+      "textRight": 88,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact-section",
+      "tag": "section",
+      "top": 3045,
+      "height": 781,
+      "words": 27,
+      "media": 0,
+      "middle": 380,
+      "heading": {
+       "text": "Let's make",
+       "size": 177,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 58,
+      "textLeft": 58,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Ideas into real software.",
+      "size": 91,
+      "top": 182,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 53,
+      "n": 16
+     },
+     {
+      "x": 755,
+      "n": 3
+     },
+     {
+      "x": 985,
+      "n": 2
+     },
+     {
+      "x": 88,
+      "n": 1
+     },
+     {
+      "x": 537,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 23,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 780,
+     "w": 1440,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.52,
+    0.92,
+    0.71,
+    0.89,
+    0.91
+   ],
+   "motion": {
+    "elements": 21,
+    "css": 15,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4301,
+     "screens": 4.2,
+     "words": 361,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "chars": 25,
+     "lines": 2,
+     "size": 80.6,
+     "vw": 10.5,
+     "font": "Switzer",
+     "weight": 500,
+     "tracking": -0.062,
+     "leading": 1.01,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.56,
+     "top": 117,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "lines": 2,
+     "size": 80.6,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Ideas into real software.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 80.6,
+      "vw": 10.5,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.062,
+      "leading": 1.01,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 117,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Different problems. The same curiosity.",
+      "words": 5,
+      "chars": 39,
+      "lines": 2,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 1096,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Less talk. More building.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 56,
+      "vw": 7.3,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1343,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A little curiosity",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 1856,
+      "tag": "h4",
+      "kind": "heading"
+     },
+     {
+      "text": "MUP Authoring Tool",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 2244,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A builder, still learning.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 61,
+      "vw": 7.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2596,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "I care about the details that turn an idea into useful software.",
+      "words": 12,
+      "chars": 64,
+      "lines": 1,
+      "size": 27,
+      "vw": 3.5,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2761,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Let's make it happen.",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 115.2,
+      "vw": 15,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.065,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3834,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "lucian@uritu.net",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Satoshi",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 4090,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Satoshi",
+       "share": 0.8,
+       "mono": false
+      },
+      {
+       "family": "Switzer",
+       "share": 0.2,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      23,
+      24,
+      25,
+      27,
+      32,
+      36,
+      56,
+      61,
+      81,
+      115
+     ],
+     "sizeCount": 15,
+     "notLoaded": [
+      "Satoshi"
+     ],
+     "body": {
+      "font": "Satoshi",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.9
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 115.2,
+      "vw": 15,
+      "font": "Switzer",
+      "text": "Let's makeit happen."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f5f5f2",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.13,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#2448ee",
+       "top": 683,
+       "hsl": {
+        "h": 229,
+        "s": 0.86,
+        "l": 0.54
+       }
+      },
+      {
+       "color": "#242622",
+       "top": 1268,
+       "hsl": {
+        "h": 90,
+        "s": 0.06,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#e5e9da",
+       "top": 1778,
+       "hsl": {
+        "h": 76,
+        "s": 0.25,
+        "l": 0.88
+       }
+      },
+      {
+       "color": "#dce5cc",
+       "top": 1778,
+       "hsl": {
+        "h": 82,
+        "s": 0.32,
+        "l": 0.85
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#252622",
+       "share": 0.53
+      },
+      {
+       "color": "#b9bcb3",
+       "share": 0.19
+      },
+      {
+       "color": "#64665e",
+       "share": 0.07
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#f5f5f2",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#252622",
+      "hsl": {
+       "h": 75,
+       "s": 0.06,
+       "l": 0.14
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 8,
+     "boxRadius": 7,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 90,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4301,
+    "margins": {
+     "left": 31,
+     "right": 31
+    },
+    "sections": [
+     {
+      "sel": "section#top.hero.frame",
+      "tag": "section",
+      "top": 90,
+      "height": 1178,
+      "words": 64,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ideas into",
+       "size": 81,
+       "tag": "h1"
+      },
+      "left": 26,
+      "right": 61,
+      "textLeft": 26,
+      "textRight": 61,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.work-section",
+      "tag": "section",
+      "top": 1268,
+      "height": 1248,
+      "words": 124,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Less talk.",
+       "size": 56,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about-section.frame",
+      "tag": "section",
+      "top": 2516,
+      "height": 1188,
+      "words": 160,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "A builder,",
+       "size": 61,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 54,
+      "textLeft": 31,
+      "textRight": 54,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact-section",
+      "tag": "section",
+      "top": 3704,
+      "height": 597,
+      "words": 27,
+      "media": 0,
+      "middle": 52,
+      "heading": {
+       "text": "Let's make",
+       "size": 115,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Ideas into real software.",
+      "size": 81,
+      "top": 117,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 26,
+      "n": 16
+     },
+     {
+      "x": 395,
+      "n": 4
+     },
+     {
+      "x": 54,
+      "n": 2
+     },
+     {
+      "x": 416,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 23,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.57,
+    0.83,
+    0.81,
+    0.7,
+    0.81,
+    0.91
+   ],
+   "motion": {
+    "elements": 21,
+    "css": 15,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4615,
+     "screens": 5.5,
+     "words": 355,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "chars": 25,
+     "lines": 2,
+     "size": 43,
+     "vw": 11,
+     "font": "Switzer",
+     "weight": 500,
+     "tracking": -0.06,
+     "leading": 1.01,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.59,
+     "top": 109,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Ideas into real software.",
+     "words": 4,
+     "lines": 2,
+     "size": 43,
+     "font": "Switzer"
+    },
+    "headings": [
+     {
+      "text": "Ideas into real software.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 43,
+      "vw": 11,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.06,
+      "leading": 1.01,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 109,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "I'm Lucian, a software engineer who turns complex problems into practical tools.",
+      "words": 12,
+      "chars": 80,
+      "lines": 3,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Satoshi",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.4,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 222,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Different problems. The same curiosity.",
+      "words": 5,
+      "chars": 39,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 866,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Less talk. More building.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 54,
+      "vw": 13.8,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 1112,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "MUP Authoring Tool",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 1999,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A builder, still learning.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 53,
+      "vw": 13.6,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 2376,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "I care about the details that turn an idea into useful software.",
+      "words": 12,
+      "chars": 64,
+      "lines": 2,
+      "size": 25,
+      "vw": 6.4,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 2525,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Computer Science at Maastricht University.",
+      "words": 5,
+      "chars": 42,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3053,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "A little competitive. Always curious.",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3713,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Let's make it happen.",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 74.1,
+      "vw": 19,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.065,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 4165,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "lucian@uritu.net",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 29,
+      "vw": 7.4,
+      "font": "Satoshi",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.63,
+      "top": 4345,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 5,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Satoshi",
+       "share": 0.79,
+       "mono": false
+      },
+      {
+       "family": "Switzer",
+       "share": 0.21,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      20,
+      23,
+      25,
+      28,
+      29,
+      30,
+      43,
+      53,
+      54,
+      74
+     ],
+     "sizeCount": 14,
+     "notLoaded": [
+      "Satoshi"
+     ],
+     "body": {
+      "font": "Satoshi",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.9
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 74.1,
+      "vw": 19,
+      "font": "Switzer",
+      "text": "Let's makeit happen."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f5f5f2",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.13,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#2448ee",
+       "top": 553,
+       "hsl": {
+        "h": 229,
+        "s": 0.86,
+        "l": 0.54
+       }
+      },
+      {
+       "color": "#242622",
+       "top": 1052,
+       "hsl": {
+        "h": 90,
+        "s": 0.06,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#e5e9da",
+       "top": 1668,
+       "hsl": {
+        "h": 76,
+        "s": 0.25,
+        "l": 0.88
+       }
+      },
+      {
+       "color": "#dce5cc",
+       "top": 1668,
+       "hsl": {
+        "h": 82,
+        "s": 0.32,
+        "l": 0.85
+       }
+      },
+      {
+       "color": "#e6e8e1",
+       "top": 2981,
+       "hsl": {
+        "h": 77,
+        "s": 0.13,
+        "l": 0.9
+       }
+      },
+      {
+       "color": "#e4e9f3",
+       "top": 3303,
+       "hsl": {
+        "h": 220,
+        "s": 0.38,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#e7e7e3",
+       "top": 3641,
+       "hsl": {
+        "h": 60,
+        "s": 0.08,
+        "l": 0.9
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#252622",
+       "share": 0.53
+      },
+      {
+       "color": "#b9bcb3",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#64665e",
+       "share": 0.06
+      },
+      {
+       "color": "#f5f5f2",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#252622",
+      "hsl": {
+       "h": 75,
+       "s": 0.06,
+       "l": 0.14
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 7,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 2981
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 82,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4615,
+    "margins": {
+     "left": 22,
+     "right": 22
+    },
+    "sections": [
+     {
+      "sel": "section#top.hero.frame",
+      "tag": "section",
+      "top": 82,
+      "height": 970,
+      "words": 61,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ideas into",
+       "size": 43,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.work-section",
+      "tag": "section",
+      "top": 1052,
+      "height": 1259,
+      "words": 124,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Less talk.",
+       "size": 54,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.about-intro.reveal",
+      "tag": "div",
+      "top": 2376,
+      "height": 561,
+      "words": 91,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "still learning.",
+       "size": 53,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 26,
+      "textLeft": 22,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.background-grid",
+      "tag": "div",
+      "top": 2981,
+      "height": 1013,
+      "words": 67,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Computer Science",
+       "size": 28,
+       "tag": "p"
+      },
+      "left": 49,
+      "right": 49,
+      "textLeft": 49,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact-section",
+      "tag": "section",
+      "top": 4059,
+      "height": 556,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Let's make",
+       "size": 74,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Ideas into real software.",
+      "size": 43,
+      "top": 109,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 16
+     },
+     {
+      "x": 49,
+      "n": 4
+     },
+     {
+      "x": 203,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 23,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "font-fallback",
+   "width": 1440,
+   "message": "Typeface(s) declared but not loaded, so a fallback is rendering: Satoshi",
+   "fix": "Fix the font URL / family name, or the screenshots you are judging are not the design.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "14 different font sizes (13, 14, 15, 16, 17, 24, 25, 27, 32, 37, 43, 82, 91, 177).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 58px on the left, 84px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\desktop-page-01.jpg",
+    "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\lucia\\OneDrive\\Desktop\\Portofolio\\output\\refinement-check\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

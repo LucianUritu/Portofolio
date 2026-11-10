@@ -1,4 +1,5 @@
 import { Dom } from '../utils/dom.js';
+import { routeStops, routeConnections, findRoute } from '../utils/routePlanner.js';
 
 const svg = (content) => `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${content}</svg>`;
 export const projectSymbols = [
@@ -23,6 +24,7 @@ function shell(root, className, title, subtitle) {
 
 export class ProjectDemos {
   static mount(root, index) {
+    root.classList.toggle('is-route-preview', index === 4);
     const methods = [this.book, this.traffic, this.network, this.parallax, this.route, this.graph];
     return methods[index](root) || (() => {});
   }
@@ -127,21 +129,103 @@ export class ProjectDemos {
   }
 
   static route(root) {
-    const { content, caption } = shell(root, 'route-demo', 'Finding a way through', 'Route sketch');
-    content.innerHTML = '<svg class="route-map" viewBox="0 0 500 280" role="img" aria-label="A simplified route map"><path d="M30 40h440M30 90h440M30 140h440M30 190h440M30 240h440M80 20v240M160 20v240M240 20v240M320 20v240M400 20v240" stroke="#bbd5cc" stroke-width="10"/><path d="M400 0c-45 60 50 85 0 155s0 90 40 125" fill="none" stroke="#a4c5d1" stroke-width="30"/><path class="route-line" d="M80 240V140H240V40H400"/><circle class="route-node" cx="80" cy="240" r="9"/><circle class="route-node" cx="400" cy="40" r="9"/><text x="38" y="268" fill="#285f55" font-size="13" font-family="inherit">Start</text><text x="412" y="44" fill="#285f55" font-size="13" font-family="inherit">Finish</text></svg>';
-    const options = Dom.create('div', 'route-options');
-    options.setAttribute('role', 'group'); options.setAttribute('aria-label', 'Choose a route');
-    const routes = ['M80 240V140H240V40H400', 'M80 240V90H320V40H400', 'M80 240H320V40H400'];
-    ['Balanced', 'Scenic', 'Direct'].forEach((name, i) => {
-      const button = Dom.create('button', '', name);
-      button.type = 'button'; button.setAttribute('aria-pressed', String(i === 0));
-      button.addEventListener('click', () => {
-        content.querySelector('.route-line').setAttribute('d', routes[i]);
-        [...options.children].forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+    const { content, caption } = shell(root, 'route-demo', 'Finding a way through', 'Choose two stops');
+    const field = Dom.create('div', 'route-field');
+    field.setAttribute('role', 'group');
+    field.setAttribute('aria-label', 'Pick a start stop and a destination');
+    const stopById = new Map(routeStops.map(stop => [stop.id, stop]));
+    const roads = routeConnections.map(([a, b]) => {
+      const from = stopById.get(a), to = stopById.get(b);
+      return `<path d="M${from.x} ${from.y}L${to.x} ${to.y}"/>`;
+    }).join('');
+    field.innerHTML = `<svg class="route-map" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M72 0C62 22 91 39 75 61S71 90 82 100" fill="none" stroke="#b5cfd7" stroke-width="8"/><g fill="none" stroke="#b1cfc1" stroke-width="2">${roads}</g><path class="route-line"/></svg>`;
+    const line = field.querySelector('.route-line');
+    const traveler = Dom.create('div', 'route-traveler');
+    traveler.hidden = true;
+    traveler.setAttribute('aria-hidden', 'true');
+    const status = Dom.create('span', '', 'Pick a start stop, then a destination.');
+    status.setAttribute('role', 'status');
+    const run = Dom.create('button', 'demo-button', 'Run route');
+    const reset = Dom.create('button', 'demo-button route-reset', 'Reset');
+    run.type = reset.type = 'button';
+    run.disabled = true;
+    const actions = Dom.create('div', 'route-actions');
+    actions.append(reset, run);
+    let start = null, destination = null, animation = null, generation = 0;
+    let mounted = true;
+    const stopButtons = new Map();
+    const cancel = () => { generation++; animation?.cancel(); animation = null; };
+    const update = () => {
+      stopButtons.forEach((button, id) => {
+        const kind = id === start ? 'start' : id === destination ? 'destination' : '';
+        button.dataset.kind = kind;
+        button.setAttribute('aria-pressed', String(Boolean(kind)));
+        button.setAttribute('aria-label', `Stop ${id}${kind ? `, ${kind}` : ''}`);
+        button.classList.remove('is-arrived');
       });
-      options.append(button);
+      line.removeAttribute('d');
+      traveler.hidden = true;
+      run.disabled = !start || !destination;
+      run.textContent = 'Run route';
+    };
+    routeStops.forEach(({ id, x, y }) => {
+      const button = Dom.create('button', 'route-stop', id);
+      button.type = 'button';
+      button.dataset.stop = id;
+      button.style.left = `${x}%`; button.style.top = `${y}%`;
+      button.addEventListener('click', () => {
+        cancel();
+        if (!start || destination) {
+          start = id; destination = null;
+          status.textContent = `Start: stop ${id}. Now pick your destination.`;
+        } else if (id === start) {
+          status.textContent = 'Pick a different stop for your destination.';
+        } else {
+          destination = id;
+          status.textContent = `Stop ${start} to stop ${destination}. Ready to run.`;
+        }
+        update();
+      });
+      stopButtons.set(id, button); field.append(button);
     });
-    caption.append(Dom.create('span', '', 'A different route changes the journey.'), options);
+    run.addEventListener('click', async (event) => {
+      if (!start || !destination || run.disabled) return;
+      cancel();
+      const route = findRoute(start, destination);
+      if (!route) { status.textContent = 'No connection found. Pick another destination.'; return; }
+      const token = generation;
+      run.disabled = true;
+      status.textContent = `Traveling from stop ${start} to stop ${destination}…`;
+      line.setAttribute('d', route.stops.map((stop, i) => `${i ? 'L' : 'M'}${stop.x} ${stop.y}`).join(''));
+      const { width, height } = field.getBoundingClientRect();
+      const last = route.stops.at(-1);
+      const transform = stop => `translate(${(stop.x - last.x) * width / 100}px, ${(stop.y - last.y) * height / 100}px)`;
+      traveler.hidden = false;
+      traveler.style.left = `${last.x}%`;
+      traveler.style.top = `${last.y}%`;
+      traveler.style.transform = 'none';
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && event.detail !== 0) {
+        let traveled = 0;
+        const keyframes = route.stops.map((stop, i) => {
+          if (i) traveled += Math.hypot(stop.x - route.stops[i-1].x, stop.y - route.stops[i-1].y);
+          return { transform: transform(stop), offset: traveled / route.distance };
+        });
+        animation = traveler.animate(keyframes, { duration: 1600, easing: 'linear' });
+        try { await animation.finished; } catch { return; }
+      }
+      if (!mounted || token !== generation) return;
+      stopButtons.get(destination).classList.add('is-arrived');
+      status.textContent = `Arrived at stop ${destination}. ${route.stops.length - 1} connections from ${start}.`;
+      run.disabled = false;
+      run.textContent = 'Run again';
+    });
+    reset.addEventListener('click', () => {
+      cancel(); start = destination = null; update();
+      status.textContent = 'Pick a start stop, then a destination.';
+    });
+    field.append(traveler); content.append(field); caption.append(status, actions);
+    update();
+    return () => { mounted = false; cancel(); };
   }
 
   static graph(root) {

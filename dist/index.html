@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,16 +23,16 @@
   <main id="main">
     <section class="hero frame" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title"><span class="title-line"><span>Engineering,</span></span><span class="title-line"><span>with curiosity.</span></span></h1>
-        <p class="hero-intro">I'm Lucian. I turn complicated ideas into software that works.</p>
-        <p class="hero-context">Computer Science at Maastricht University.<br>Building across software, systems, and everything in between.</p>
-        <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
-        <div class="hero-foot"><span>Based in Maastricht, Netherlands</span><span class="scroll-cue" aria-hidden="true">Scroll to explore <span>↓</span></span></div>
+        <h1 id="hero-title"><span class="title-line"><span>Ideas into</span></span><span class="title-line"><span>real software.</span></span></h1>
+        <p class="hero-intro">I'm Lucian, a software engineer who turns complex problems into practical tools.</p>
+        <p class="hero-context">Computer Science at Maastricht University.<br>Currently building tools for open education as a student assistant.</p>
+        <a class="button button-dark" href="#work">Explore my work <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-down-right"/></svg></a>
+        <div class="hero-foot"><span>Based in Maastricht, Netherlands</span><span class="scroll-cue" aria-hidden="true">Scroll to explore <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="assets/icons.svg#arrow-down"/></svg></span></div>
       </div>
       <div class="hero-playground" aria-label="Six projects to explore">
-        <div class="playground-top"><span>A few things I've built</span><svg class="asterisk" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2v36M2 20h36M7 7l26 26M7 33 33 7"/></svg></div>
+        <div class="playground-top"><span>A few things I've built</span><div class="playground-controls"><button class="motion-toggle" id="motionToggle" type="button" aria-label="Pause tile motion" aria-pressed="false"><svg class="icon pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14"/></svg><svg class="icon play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 5 11 7-11 7Z"/></svg></button><svg class="asterisk" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2v36M2 20h36M7 7l26 26M7 33 33 7"/></svg></div></div>
         <div class="artifact-grid" id="artifactGrid"></div>
-        <div class="playground-bottom"><p>Different problems.<br>The same curiosity.</p><span class="playground-hint">Pick a project <span aria-hidden="true">↗</span></span></div>
+        <div class="playground-bottom"><p>Different problems.<br>The same curiosity.</p><span class="playground-hint">Pick a project <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up-right"/></svg></span></div>
       </div>
     </section>
     <section class="work-section" id="work" aria-labelledby="work-title">
@@ -42,11 +43,11 @@
           <div class="project-stage" data-ui><div class="demo-surface" id="demoSurface" aria-label="Project interactive preview"></div><div class="project-detail" id="projectDetail" aria-live="polite" aria-atomic="true"></div></div>
         </div>
         <noscript><p>Projects: MUP Authoring Tool, Unblocking the City, Gemini-Lite Protocol, Parallax User Study, Helsinki Route Planner, and Graph Coloring Game. <a href="https://github.com/LucianUritu">Explore the repositories on GitHub.</a></p></noscript>
-        <div class="work-close"><p>Curiosity doesn't stay in one lane.</p><a class="text-link" href="https://github.com/LucianUritu" target="_blank" rel="noopener">More on GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="work-close"><p>Curiosity doesn't stay in one lane.</p><a class="text-link" href="https://github.com/LucianUritu" target="_blank" rel="noopener">More on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up-right"/></svg></a></div>
       </div>
     </section>
     <section class="about-section frame" id="about" aria-labelledby="about-title">
-      <div class="about-intro reveal"><h2 id="about-title">A builder,<br>still learning.</h2><div><p class="about-lead">I like the moment when a difficult problem starts making sense.</p><p>I'm a Computer Science student at Maastricht University, working across software engineering, high-performance computing, networking, and embedded systems. I care about clean architecture, useful interfaces, and understanding what's happening underneath.</p><p>As a student assistant in the Open Science in Education team, I work with researchers and faculty to make digital learning materials more accessible.</p><a class="text-link" href="Lucian%20Uritu%20CV%20main.pdf" download>Get the full story in my CV <span aria-hidden="true">↓</span></a></div></div>
+      <div class="about-intro reveal"><h2 id="about-title">A builder,<br>still learning.</h2><div><p class="about-lead">I care about the details that turn an idea into useful software.</p><p>I'm a Computer Science student at Maastricht University, working across software engineering, high-performance computing, networking, and embedded systems. I care about clean architecture, useful interfaces, and understanding what's happening underneath.</p><p>As a student assistant in the Open Science in Education team, I work with researchers and faculty to make digital learning materials more accessible.</p><a class="text-link" href="Lucian%20Uritu%20CV%20main.pdf" download>Get the full story in my CV <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-down"/></svg></a></div></div>
       <div class="background-grid">
         <article class="background-panel education-panel reveal"><h3>Currently</h3><p class="background-feature">Computer Science<br>at Maastricht University.</p><p>BSc, 2024–2027 <span class="subtle">(expected)</span></p><div class="education-note"><span>Before Maastricht</span><p>Spiru Haret, Chișinău<br>Baccalaureate, 2021–2024</p></div></article>
         <article class="background-panel toolkit-panel reveal"><h3>My toolkit</h3><div id="skillsGrid"></div></article>
@@ -54,7 +55,7 @@
       </div>
     </section>
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="frame contact-inner"><div class="contact-top"><a class="back-top" href="#top" aria-label="Back to top">↑</a></div><h2 id="contact-title" class="reveal">Let's make<br>it happen.</h2><div class="contact-bottom"><div><a class="email-link" href="mailto:lucian@uritu.net">lucian@uritu.net <span aria-hidden="true">↗</span></a><p>Open to software engineering roles, internships,<br>and ambitious technical projects.</p></div><div class="social-links"><a href="https://github.com/LucianUritu" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/lucian-ur%C3%AEtu-617a84278/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a><a href="Lucian%20Uritu%20CV%20main.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div></div><footer><span>Lucian Uritu</span><span>Made with curiosity, in Maastricht.</span><span id="copyrightYear">2026</span></footer></div>
+      <div class="frame contact-inner"><div class="contact-top"><a class="back-top" href="#top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up"/></svg></a></div><h2 id="contact-title" class="reveal">Let's make<br>it happen.</h2><div class="contact-bottom"><div><a class="email-link" href="mailto:lucian@uritu.net">lucian@uritu.net <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up-right"/></svg></a><p>Open to software engineering roles, internships,<br>and ambitious technical projects.</p></div><div class="social-links"><a href="https://github.com/LucianUritu" target="_blank" rel="noopener">GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up-right"/></svg></a><a href="https://www.linkedin.com/in/lucian-ur%C3%AEtu-617a84278/" target="_blank" rel="noopener">LinkedIn <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-up-right"/></svg></a><a href="Lucian%20Uritu%20CV%20main.pdf" download>Download CV <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow-down"/></svg></a></div></div><footer><span>Lucian Uritu</span><span>Made with curiosity, in Maastricht.</span><span id="copyrightYear">2026</span></footer></div>
     </section>
   </main>
   <script type="module" src="scripts/main.js"></script>
