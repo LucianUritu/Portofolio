@@ -301,7 +301,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
 }
 .artifact-float {
   min-width:0;
-  animation:tile-float calc(4s + var(--i)*.35s) var(--ease-in-out) infinite alternate;
+  animation:tile-float calc(2.6s + var(--i)*.2s) var(--ease-in-out) infinite alternate;
   animation-delay:calc(var(--i)*-.65s);
 }
 .hero-playground.is-motion-paused .artifact-float,.artifact-float:focus-within {

@@ -54,7 +54,7 @@ export const portfolioProfile = {
     },
     {
       group: "Engineering",
-      items: ["OOP", "Algorithms", "Databases", "APIs", "Git"]
+      items: ["OOP", "Algorithms", "Databases", "APIs", "Git", "AI Development"]
     }
   ]
 };
