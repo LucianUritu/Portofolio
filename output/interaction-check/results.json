@@ -1,0 +1,174 @@
+[
+  {
+    "name": "All six project choices and hero artifacts render",
+    "pass": true
+  },
+  {
+    "name": "Live authoring updates and escapes HTML",
+    "pass": true
+  },
+  {
+    "name": "Project 1 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Project 2 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Project 3 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Project 4 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Project 5 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Project 6 selection updates the accessible state and preview",
+    "pass": true
+  },
+  {
+    "name": "Traffic is paused initially and has a pause control",
+    "pass": true
+  },
+  {
+    "name": "Networking request reaches a completed response",
+    "pass": true
+  },
+  {
+    "name": "Perspective slider changes layer transforms",
+    "pass": true
+  },
+  {
+    "name": "Route control selects a different path",
+    "pass": true
+  },
+  {
+    "name": "Graph puzzle recognizes a valid coloring and resets",
+    "pass": true
+  },
+  {
+    "name": "CV and external links preserve actual destinations",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 1",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 2",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 3",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 4",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 5",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 1440px, project 6",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 1",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 2",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 3",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 4",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 5",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 768px, project 6",
+    "pass": true
+  },
+  {
+    "name": "Touch editor avoids iOS focus zoom",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 1",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 2",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 3",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 4",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 5",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 390px, project 6",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 1",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 2",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 3",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 4",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 5",
+    "pass": true
+  },
+  {
+    "name": "No horizontal overflow at 320px, project 6",
+    "pass": true
+  },
+  {
+    "name": "No uncaught browser errors",
+    "pass": true
+  },
+  {
+    "name": "Reduced motion keeps hero content visible without entrance travel",
+    "pass": true
+  },
+  {
+    "name": "Reduced motion keeps traffic still",
+    "pass": true
+  },
+  {
+    "name": "No browser errors under reduced motion",
+    "pass": true
+  }
+]

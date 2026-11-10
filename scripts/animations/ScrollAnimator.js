@@ -1,20 +1,19 @@
 export class ScrollAnimator {
-  constructor() {
-    this.observer = new IntersectionObserver((entries) => this.handleEntries(entries), {
-      rootMargin: "0px 0px -10% 0px",
-      threshold: 0.12
-    });
-  }
-
-  observeAll(selector = ".reveal") {
-    document.querySelectorAll(selector).forEach((element) => this.observer.observe(element));
-  }
-
-  handleEntries(entries) {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("visible");
-      this.observer.unobserve(entry.target);
+  observeAll(selector = '.reveal') {
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const elements = [...document.querySelectorAll(selector)];
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('is-waiting');
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08 });
+    elements.forEach((element) => {
+      // Content is only hidden after the observer is ready; no-JS stays readable.
+      element.classList.add('is-waiting');
+      observer.observe(element);
     });
   }
 }

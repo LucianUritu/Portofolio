@@ -1,0 +1,58 @@
+Use case: ui-mockup.
+Create a NEW high-fidelity website design image for Lucian Uritu's personal software engineering portfolio. The client rejected the previous design because it looked too AI generated and focused too much on a single project. This version must be much simpler, natural, understated, and reflect his WHOLE CV. Design a beautiful usable website, not a decorated CV document or poster.
+
+OUTPUT: one flat front-facing full-page desktop website screenshot, portrait aspect ratio approximately 2:3, ideally 1800 x 2700. Crisp readable type. No browser frame, device, mockup environment, annotations, watermark, decorative objects, or presentation board.
+
+ART DIRECTION: white canvas, charcoal typography, a single quiet medium-blue accent, subtle light grey surface only where useful. More like a thoughtful independent engineer's personal site than a design agency, SaaS landing page, or futuristic tech demo. One sans-serif family resembling Switzer, with excellent typographic spacing and hierarchy. White #FFFFFF, charcoal #22272B, secondary slate #616A74, blue #315ECA, pale grey #F2F4F6. Every headline is one color and one consistent type treatment. Calm regular and medium weights, no oversized heavy slogan, no gradients, no 3D renders, no traffic pictures, no illustrations, no stock photos, no fake app screenshots, no icons in colored squares, no glass, no floating cards, no pills, no badges, no decorative grids, no arbitrary numbered labels, no thick rules. Design interest comes from alignment, hierarchy, balance, and thoughtful spacing. Thin rules should be avoided; use whitespace and light surface changes. The website looks deliberately simple and real.
+
+FRAME: a centered content width of about 1150px within an 1800px image, so generous equal margins. One consistent left alignment for section titles. Section headings in a narrow left column about 20% of content width, section content in a wide right column about 75%, except hero and projects which use full width. This repeated alignment makes a coherent website. Keep useful detail and avoid huge empty stretches.
+
+CONTENT AND LAYOUT from top to bottom:
+
+HEADER (about 4% height): 'Lucian Uritu' small medium weight at left; plain navigation 'Experience', 'Projects', 'About' at right; a quiet pale-grey rounded rectangle 'Download CV' at far right. No logo graphic. The header aligns with the site's content frame.
+
+HERO (about 15% height): Large name 'Lucian Uritu' at about 90px desktop equivalent, followed by a second-size line 'Software engineer & Computer Science student'. Below, a readable short paragraph on two or three lines: 'I build practical software, from educational tools to parallel systems, networking, and interactive applications.' It must be readable, no tiny grey text.
+Below paragraph, two simple actions 'Get in touch' as a small solid blue button, and 'View GitHub' as plain text. Small unobtrusive location 'Maastricht, Netherlands'. No huge visual, no available-for-work badge, no metrics, no invented portrait. This page should feel personal and quiet.
+
+EXPERIENCE (about 12% height): left column title 'Experience'. Right wide column holds the role title 'Student assistant' with 'Apr 2026 – Present' aligned right. Beneath: 'Maastricht University' and 'Open Science in Education'. Two clear bullets:
+'Proposed and independently developed an educational publishing platform.'
+'Work with researchers and faculty on accessible learning materials, documentation, and user guides.'
+Do not invent another employer. Do not mention an already completed launch; the CV says it was planned, so omit launch status.
+
+EDUCATION (about 10% height): left column title 'Education'. Right: 'BSc Computer Science', 'Maastricht University', '2024 – Expected 2027'. Below with comfortable gap: 'Baccalaureate Diploma', 'Spiru Haret, Chișinău', '2021 – 2024'. Dates aligned neatly right. Smaller supporting line 'Graduated with an average of 8.95 / 10.' Academic section is polished and compact, not a card.
+
+PROJECTS (about 27% height): heading 'Projects' across full width, then SIX equally weighted project entries arranged in a quiet two-column, three-row layout with large whitespace gutters. No enclosing cards and NO images. Each entry has title, one concise description of two lines at most, and a small text technology line beneath. Nothing featured or enlarged. Every project is equally prominent:
+1 'MUP Authoring Tool'
+'An authoring platform that turns plain text into structured books for open education.'
+'JavaScript, Node.js, Electron, GitHub API'
+2 'Unblocking the City'
+'Parallel urban traffic simulation, graph partitioning, and scalability analysis.'
+'MPI, SUMO, METIS, HPC'
+3 'Gemini-Lite Protocol'
+'A modular protocol server and client with proxying, parsing, and tests.'
+'Java, Networking'
+4 'Parallax User Study'
+'A game-based research platform for eye tracking and interactive 3D visualization.'
+'OpenCV, Eye tracking, 3D'
+5 'Helsinki Route Planner'
+'Public transport journey planning and transit heatmap visualization.'
+'JavaFX, Route planning'
+6 'Graph Coloring Game'
+'An interactive game for exploring graph theory and coloring algorithms.'
+'JavaFX, Algorithms'
+Project titles in charcoal about 24px equivalent, descriptions 17px, tech line 15px but clearly readable. A small discreet external-link glyph after each title is acceptable but unnecessary; do not append arrows to every item.
+
+SKILLS (about 12% height): left title 'Skills'. Right two balanced text columns using simple named groups, no tag cloud, no badges, no progress bars.
+'Languages' with 'JavaScript, Java, Python, C, Assembly, HTML/CSS'
+'Systems & tools' with 'MPI, OpenMP, CUDA, Linux/Unix, Git, Node.js, OpenCV'
+'Engineering' with 'Data structures, algorithms, databases, networking, APIs'
+'Focus areas' with 'High-performance computing, embedded systems, parallel computing'
+Use real text wrapping, consistent line heights, natural visual density.
+
+ABOUT / ADDITIONAL (about 10% height): left heading 'A little more'. Right two columns:
+'Languages I speak' with 'Romanian — native', 'English — C2', 'Russian — conversational'.
+'Programming competitions' with 'Marathon C++ Tekwill, 2023' and 'School informatics competitions, 2021–2023'. Smaller support '1st and 2nd place in local competitions.' Do not embellish awards, invent scores or claim national podium placements.
+
+FOOTER (about 10% height): slightly pale grey full-width area within the white page, generous inner spacing aligned with the same content width. Simple heading 'Let’s talk.' at a modest confident 40px equivalent. Sentence 'Open to software engineering roles, internships, and interesting projects.' Clear blue text email 'lucian@uritu.net'. At the bottom small 'Lucian Uritu' left and plain 'GitHub', 'LinkedIn', 'Download CV' right.
+
+QUALITY: This must look like a polished practical website made by a thoughtful human. Natural typography, comfortable density, one consistent strong grid, equal margins, readable actual content, no cropped text, no section numbers, no invented achievements. Use actual CV facts only as listed above. All six projects receive equal attention. Name spelling exact. Keep it quiet, intelligent, approachable, and very simple. Do not add trendy decorative details to compensate for simplicity. Static resting state; intended motion is restrained opacity entrance and brief hover feedback, not visible ghosting or movement trails.

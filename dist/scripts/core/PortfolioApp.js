@@ -1,71 +1,101 @@
-import { ScrollAnimator } from "../animations/ScrollAnimator.js";
-import { CommandCenter } from "../scenes/CommandCenter.js";
-import { Dom } from "../utils/dom.js";
-import { PortfolioRenderer } from "./PortfolioRenderer.js";
+import { ScrollAnimator } from '../animations/ScrollAnimator.js';
+import { ProjectDemos, projectSymbols } from '../components/ProjectDemos.js';
+import { Dom } from '../utils/dom.js';
+import { safeExternalUrl } from '../utils/sanitize.js';
 
 export class PortfolioApp {
   constructor(profile) {
     this.profile = profile;
-    this.renderer = new PortfolioRenderer(profile);
-    this.scrollAnimator = new ScrollAnimator();
-    this.commandCenter = null;
+    this.selected = -1;
+    this.cleanupDemo = null;
   }
 
   mount() {
-    this.renderer.render();
-    this.startCommandCenter();
-    this.bindJumpMenu();
-    this.bindCvPreview();
-    this.bindScrollProgress();
-    this.scrollAnimator.observeAll();
+    this.renderProjects();
+    this.renderSkills();
+    this.selectProject(0, false);
+    new ScrollAnimator().observeAll();
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+    document.addEventListener('keydown', () => document.body.classList.add('keyboard-input'));
+    document.addEventListener('pointerdown', () => document.body.classList.remove('keyboard-input'));
   }
 
-  startCommandCenter() {
-    const root = Dom.select("#commandCenter");
-    this.commandCenter = new CommandCenter(root);
-    this.commandCenter.start();
-  }
-
-  bindJumpMenu() {
-    const button = Dom.select("#jumpButton");
-    const list = Dom.select("#jumpList");
-
-    button.addEventListener("click", () => {
-      const isOpen = list.classList.toggle("open");
-      button.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    list.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        list.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
+  renderProjects() {
+    const artifacts = Dom.select('#artifactGrid');
+    const index = Dom.select('#projectIndex');
+    const verbs = ['Build', 'Compute', 'Connect', 'Explore', 'Navigate', 'Solve'];
+    const rotations = [-8, 4, -4, 5, -5, 8];
+    this.profile.projects.forEach((project, i) => {
+      const tile = Dom.create('button', 'artifact');
+      tile.type = 'button';
+      tile.style.setProperty('--i', i);
+      tile.style.setProperty('--r', `${rotations[i]}deg`);
+      tile.setAttribute('aria-label', `Explore ${project.title}`);
+      tile.innerHTML = projectSymbols[i];
+      tile.append(Dom.create('span', '', verbs[i]));
+      tile.addEventListener('click', (event) => {
+        this.selectProject(i, event.detail !== 0);
+        Dom.select('#work').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches || event.detail === 0 ? 'instant' : 'smooth' });
+        this.choices[i].focus({ preventScroll: true });
       });
+      artifacts.append(tile);
+
+      const button = Dom.create('button', 'project-choice');
+      button.type = 'button';
+      button.id = `project-choice-${i}`;
+      button.setAttribute('aria-pressed', 'false');
+      button.setAttribute('aria-controls', 'demoSurface projectDetail');
+      const text = Dom.create('span');
+      text.append(Dom.create('h3', '', project.title), Dom.create('small', '', project.label));
+      const arrow = Dom.create('span', 'choice-arrow', '↗');
+      arrow.setAttribute('aria-hidden', 'true');
+      button.append(text, arrow);
+      button.addEventListener('click', (event) => {
+        this.selectProject(i, event.detail !== 0);
+        if (event.detail !== 0 && matchMedia('(max-width: 800px)').matches) {
+          Dom.select('#demoSurface').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+        }
+      });
+      index.append(button);
     });
+    this.choices = [...index.querySelectorAll('button')];
   }
 
-  bindCvPreview() {
-    const dialog = Dom.select("#cvDialog");
-    const openButtons = [Dom.select("#cvPreviewButton"), Dom.select("#cvPreviewMenu")];
-    const closeButton = Dom.select("#cvCloseButton");
-
-    openButtons.forEach((button) => {
-      button.addEventListener("click", () => dialog.showModal());
-    });
-
-    closeButton.addEventListener("click", () => dialog.close());
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) dialog.close();
-    });
+  selectProject(i, animate = true) {
+    if (this.selected === i) return;
+    const project = this.profile.projects[i];
+    this.selected = i;
+    this.choices.forEach((button, n) => button.setAttribute('aria-pressed', String(n === i)));
+    this.cleanupDemo?.();
+    const surface = Dom.select('#demoSurface');
+    surface.classList.remove('is-entering');
+    surface.setAttribute('aria-labelledby', `project-choice-${i}`);
+    this.cleanupDemo = ProjectDemos.mount(surface, i);
+    if (animate && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      surface.animate([{ opacity: 0.35, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 250, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' });
+    }
+    const detail = Dom.select('#projectDetail');
+    const heading = Dom.create('div', 'detail-heading');
+    heading.append(Dom.create('h3', '', project.title));
+    const url = safeExternalUrl(project.link);
+    if (url) {
+      const link = Dom.create('a', 'text-link', 'Repository ↗');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      heading.append(link);
+    }
+    const stack = Dom.create('div', 'detail-stack', project.stack.join(' / '));
+    detail.replaceChildren(heading, Dom.create('p', '', project.detail), stack);
+    if (!url) detail.append(Dom.create('p', 'detail-note', 'Developed with Maastricht University’s Open Science in Education team.'));
   }
 
-  bindScrollProgress() {
-    const update = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = max > 0 ? window.scrollY / max : 0;
-      this.commandCenter?.setScrollProgress(progress);
-    };
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
+  renderSkills() {
+    const root = Dom.select('#skillsGrid');
+    this.profile.skills.forEach((group) => {
+      const item = Dom.create('div', 'skill-group');
+      item.append(Dom.create('h4', '', group.group), Dom.create('p', '', group.items.join(', ')));
+      root.append(item);
+    });
   }
 }
