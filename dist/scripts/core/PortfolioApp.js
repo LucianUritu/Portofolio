@@ -111,6 +111,24 @@ export class PortfolioApp {
     }
     const stack = Dom.create('div', 'detail-stack', project.stack.join(' / '));
     detail.replaceChildren(heading, Dom.create('p', '', project.detail), stack);
+    if (project.report) {
+      const report = Dom.create('div', 'project-report');
+      const summary = Dom.create('div');
+      const read = Dom.create('a', 'text-link', 'Read report');
+      read.href = encodeURI(project.report.file);
+      read.target = '_blank';
+      read.rel = 'noopener noreferrer';
+      read.setAttribute('aria-label', `Read ${project.title} project report (PDF)`);
+      read.append(arrowIcon());
+      summary.append(read, Dom.create('p', 'report-format', `PDF, ${project.report.pages} pages`));
+      const download = Dom.create('a', 'text-link report-download', 'Download PDF');
+      download.href = read.getAttribute('href');
+      download.download = project.report.downloadName;
+      download.setAttribute('aria-label', `Download ${project.title} project report`);
+      download.append(arrowIcon('down'));
+      report.append(summary, download);
+      detail.append(report);
+    }
     if (!url) detail.append(Dom.create('p', 'detail-note', 'Developed with Maastricht University’s Open Science in Education team.'));
   }
 

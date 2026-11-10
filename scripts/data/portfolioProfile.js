@@ -12,7 +12,12 @@ export const portfolioProfile = {
       label: "HPC",
       detail: "Parallel urban traffic simulation using MPI, SUMO, graph partitioning, and cluster-based scalability analysis.",
       stack: ["MPI", "SUMO", "METIS", "HPC"],
-      link: "https://github.com/LucianUritu/hpc-traffic-simulation"
+      link: "https://github.com/LucianUritu/hpc-traffic-simulation",
+      report: {
+        file: "Project2-2Group3HPC_ProjectReport (1).pdf",
+        downloadName: "hpc-traffic-simulation-report.pdf",
+        pages: 12
+      }
     },
     {
       title: "Gemini-Lite Protocol",
@@ -33,7 +38,12 @@ export const portfolioProfile = {
       label: "Mobility",
       detail: "JavaFX route-planning application with real-time journey planning and transit heatmap visualization for Helsinki.",
       stack: ["JavaFX", "Routes", "Heatmaps", "UX"],
-      link: "https://github.com/LucianUritu/Helsinki-Route-Planner"
+      link: "https://github.com/LucianUritu/Helsinki-Route-Planner",
+      report: {
+        file: "10-FinalReport (1).pdf",
+        downloadName: "helsinki-transport-report.pdf",
+        pages: 8
+      }
     },
     {
       title: "Graph Coloring Game",

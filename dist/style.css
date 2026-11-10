@@ -560,6 +560,21 @@ h2 {
   font-size:13px!important;
   margin-top:12px
 }
+.project-report {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px 20px;
+  margin-top:22px;
+  padding:16px 18px;
+  border-radius:4px;
+  background:#33362f;
+}
+.project-report .text-link {font-size:15px;gap:12px}
+.project-report .icon {width:18px;height:18px}
+.project-report .report-format {font-size:13px;color:var(--soft-ink);margin-top:5px}
+.project-report .report-download {font-size:13px;white-space:nowrap}
 .work-close {
   display:flex;
   align-items:center;
