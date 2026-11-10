@@ -23,3 +23,7 @@ The deployable static site is written to `dist/`. Run this after editing source 
 Project descriptions, repository links, and technical skills live in `scripts/data/portfolioProfile.js`. Personal background and contact details live in `index.html`.
 
 The project previews illustrate each project's idea. They are independent portfolio interactions, not embedded versions of the full research applications. The traffic preview starts paused, and motion respects the visitor's reduced-motion preference.
+
+The route playground lets visitors choose two stops and run a shortest-path calculation. The project tiles float gently, with a pause control; they stop when offscreen or when reduced motion is requested. All navigation arrows use SVG icons.
+
+Run the routing tests with `node --test tests/routePlanner.test.mjs`.
